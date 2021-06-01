@@ -71,7 +71,7 @@
                                 Comprobante que origina la retención:
                             </td>
                             <td class="text-left">
-                                <span t-field="o.payment_group_id.document_number"/>
+                                <span t-field="o.payment_group_id.l10n_latam_document_number"/>
                             </td>
                         </tr>
                         <tr>

@@ -6,7 +6,7 @@
             <t t-set="report_date" t-value="o.payment_date"/>
             <t t-set="document_letter" t-value="'X'"/>
             <t t-set="document_legend" t-value="'Doc. no válido como factura'"/>
-            <t t-set="report_number" t-value="o.document_number"/>
+            <t t-set="report_number" t-value="o.l10n_latam_document_number"/>
             <t t-set="report_name" t-value="o.partner_type == 'supplier' and 'Orden de pago' or 'Recibo'"/>
             <t t-set="header_address" t-value="o.receiptbook_id.report_partner_id or o.company_id.partner_id"/>
 
