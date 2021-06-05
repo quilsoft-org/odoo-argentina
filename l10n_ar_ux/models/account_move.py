@@ -83,7 +83,7 @@ class AccountMove(models.Model):
                 rec.l10n_latam_document_type_id.doc_code_prefix, number['point_of_sale'], number['invoice_number'])
 
             domain = [
-                ('type', '=', rec.type),
+                ('move_type', '=', rec.move_type),
                 # by validating name we validate l10n_latam_document_number and l10n_latam_document_type_id
                 '|', ('name', '=', old_name_compat), ('name', '=', rec.name),
                 ('company_id', '=', rec.company_id.id),
@@ -93,7 +93,7 @@ class AccountMove(models.Model):
             if rec.search(domain):
                 raise ValidationError(_('Vendor bill number must be unique per vendor and company.'))
 
-    @api.constrains('ref', 'type', 'partner_id', 'journal_id', 'invoice_date')
+    @api.constrains('ref', 'move_type', 'partner_id', 'journal_id', 'invoice_date')
     def _check_duplicate_supplier_reference(self):
         """ We make reference only unique if you are not using documents.
         Documents already guarantee to not encode twice same vendor bill """
