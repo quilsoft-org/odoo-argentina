@@ -100,7 +100,7 @@ class AccountMove(models.Model):
         return super(
             AccountMove, self.filtered(lambda x: not x.l10n_latam_use_documents))._check_duplicate_supplier_reference()
 
-    def _get_name_invoice_report(self, report_xml_id):
+    '''def _get_name_invoice_report(self, report_xml_id):
         """Use always argentinian like report (regardless use documents)"""
         self.ensure_one()
         if self.company_id.country_id.code == 'AR':
@@ -109,7 +109,7 @@ class AccountMove(models.Model):
                 'account.report_invoice_document': 'l10n_ar.report_invoice_document',
             }
             return custom_report.get(report_xml_id) or report_xml_id
-        return super()._get_name_invoice_report(report_xml_id)
+        return super()._get_name_invoice_report(report_xml_id)'''
 
     def _get_l10n_latam_documents_domain(self):
         self.ensure_one()
