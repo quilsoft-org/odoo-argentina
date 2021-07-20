@@ -14,7 +14,7 @@
 Argentinian Accounting UX
 =========================
 
-This module extends the l10n_ar module to add some usability improvesment:
+This module extends the l10n_ar module to add some usability improvements:
 
 #. Set tax included by default (for ecommerce)
 #. Change USD symbol to "USD" instead of "$". This to avoid confusion when using multi company environment with ARS and USD at the same time.

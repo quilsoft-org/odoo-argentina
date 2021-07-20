@@ -3,7 +3,7 @@
     'version': '14.0.1.0.0',
     'category': 'Localization/Argentina',
     'sequence': 14,
-    'author': 'ADHOC SA',
+    'author': 'ADHOC SA, QUILSOFT',
     'license': 'AGPL-3',
     'summary': '',
     'depends': [
