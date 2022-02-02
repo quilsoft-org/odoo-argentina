@@ -1,6 +1,6 @@
 {
     'name': 'Argentinian Accounting UX',
-    'version': "14.0.1.3.3",
+    'version': "14.0.1.3.4",
     'category': 'Localization/Argentina',
     'sequence': 14,
     'author': 'ADHOC SA, QUILSOFT',
@@ -15,6 +15,7 @@
         'account_withholding',
         'account_payment_group_document',
     ],
+
     'data': [
         'data/res_currency_data.xml',
         'data/account_account_tag_data.xml',
