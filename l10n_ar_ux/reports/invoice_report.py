@@ -13,6 +13,9 @@ class AccountInvoiceReport(models.Model):
     discount = fields.Float('Discount (%)', readonly=True)
     discount_amount = fields.Monetary(
         'Discount Amount', readonly=True, group_operator="sum", currency_field='invoice_currency_id',)
+
+    amount_total = fields.Monetary(string='Untaxed Total', currency_field='invoice_currency_id', readonly=True)
+
     # por ahora no lo agregamos, el que teniamos ya era en moneda de cia y basicamente el nuevo price_subtotal ya lo
     # hace
     # price_subtotal_signed = fields.Monetary(
@@ -32,7 +35,8 @@ class AccountInvoiceReport(models.Model):
         return super()._select() + """,
             line.price_unit,
             line.id as line_id,
-            move.currency_id as invoice_currency_id,
+            move.currency_id AS invoice_currency_id,
+            move.amount_total AS amount_total
             line.discount,
             line.price_unit * line.quantity * line.discount/100 *
                 (CASE WHEN move.move_type IN ('in_refund','out_refund','in_receipt') THEN -1 ELSE 1 END) as discount_amount
