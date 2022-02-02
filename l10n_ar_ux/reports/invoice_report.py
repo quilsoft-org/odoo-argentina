@@ -36,7 +36,7 @@ class AccountInvoiceReport(models.Model):
             line.price_unit,
             line.id as line_id,
             move.currency_id AS invoice_currency_id,
-            move.amount_total AS amount_total
+            move.amount_total AS amount_total,
             line.discount,
             line.price_unit * line.quantity * line.discount/100 *
                 (CASE WHEN move.move_type IN ('in_refund','out_refund','in_receipt') THEN -1 ELSE 1 END) as discount_amount

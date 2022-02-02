@@ -58,7 +58,7 @@
             </pivot>
             <field name="price_subtotal" position="before">
                  <field name="amount_total" type="measure"/>
-        </field>
+            </field>
         </field>
     </record>
 
