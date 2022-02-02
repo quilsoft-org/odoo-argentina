@@ -1,6 +1,6 @@
 {
     'name': 'Argentinian Accounting UX',
-    'version': "14.0.1.3.2",
+    'version': "14.0.1.3.3",
     'category': 'Localization/Argentina',
     'sequence': 14,
     'author': 'ADHOC SA, QUILSOFT',
