@@ -21,10 +21,16 @@ class AccountMove(models.Model):
     @api.depends('currency_id', 'company_id', 'invoice_date')
     def _compute_currency_rate(self):
         for rec in self:
-            if rec.currency_id and rec.company_id and (rec.currency_id != rec.company_id.currency_id):
+            if rec.currency_id and rec.company_id and (rec.currency_id != rec.company_id.currency_id) and not self._context.get('active_model') == 'account.move.reversal':
                 rec.computed_currency_rate = rec.currency_id._convert(
                     1.0, rec.company_id.currency_id, rec.company_id,
                     date=rec.invoice_date or fields.Date.context_today(rec),
+                    round=False)
+            elif rec.currency_id and rec.company_id and (rec.currency_id != rec.company_id.currency_id) and self._context.get('active_model') == 'account.move.reversal':
+                reversal = self.env['account.move.reversal'].browse(self._context.get('active_id'))
+                rec.computed_currency_rate = rec.currency_id._convert(
+                    1.0, rec.company_id.currency_id, rec.company_id,
+                    date=reversal.move_ids.invoice_date or fields.Date.context_today(rec),
                     round=False)
             else:
                 rec.computed_currency_rate = 1.0
