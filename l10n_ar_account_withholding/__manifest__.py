@@ -18,36 +18,36 @@
 #
 ##############################################################################
 {
-    'author': 'ADHOC SA,Odoo Community Association (OCA), QUILSOFT',
-    'website': 'www.adhoc.com.ar',
-    'license': 'AGPL-3',
-    'category': 'Accounting & Finance',
-    'data': [
-        'security/ir.model.access.csv',
-        'security/security.xml',
-        'wizard/res_config_settings_views.xml',
-        'reports/report_withholding_certificate.xml',
-        'views/account_payment_group_view.xml',
-        'views/afip_tabla_ganancias_escala_view.xml',
-        'views/afip_tabla_ganancias_alicuotasymontos_view.xml',
-        'views/account_payment_view.xml',
-        'views/res_partner_arba_alicuot_views.xml',
-        'views/res_partner_view.xml',
-        'views/account_tax_view.xml',
-        'data/tabla_ganancias_data.xml',
-        'data/account_tax_withholding_template.xml',
+    "author": "ADHOC SA,Odoo Community Association (OCA), QUILSOFT",
+    "website": "www.adhoc.com.ar",
+    "license": "AGPL-3",
+    "category": "Accounting & Finance",
+    "data": [
+        "security/ir.model.access.csv",
+        "security/security.xml",
+        "wizard/res_config_settings_views.xml",
+        "reports/report_withholding_certificate.xml",
+        "views/account_payment_group_view.xml",
+        "views/afip_tabla_ganancias_escala_view.xml",
+        "views/afip_tabla_ganancias_alicuotasymontos_view.xml",
+        "views/account_payment_view.xml",
+        "views/res_partner_arba_alicuot_views.xml",
+        "views/res_partner_view.xml",
+        "views/account_tax_view.xml",
+        "data/tabla_ganancias_data.xml",
+        "data/account_tax_withholding_template.xml",
     ],
-    'demo': [
-        'demo/ir_parameter.xml',
+    "demo": [
+        "demo/ir_parameter.xml",
     ],
-    'depends': [
-        'account_withholding_automatic',
-        'l10n_ar_ux',
+    "depends": [
+        "account_withholding_automatic",
+        "l10n_ar_ux",
     ],
-    'external_dependencies': {
-        'python': ['pyafipws'],
+    "external_dependencies": {
+        "python": ["pyafipws"],
     },
-    'installable': True,
-    'name': 'Automatic Argentinian Withholdings on Payments',
-    'version': "14.0.1.2.0",
+    "installable": True,
+    "name": "Automatic Argentinian Withholdings on Payments",
+    "version": "14.0.1.2.0",
 }
