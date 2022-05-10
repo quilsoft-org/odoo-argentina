@@ -49,5 +49,5 @@
     },
     "installable": True,
     "name": "Automatic Argentinian Withholdings on Payments",
-    "version": "14.0.1.2.0",
+    "version": "14.0.1.2.1",
 }
