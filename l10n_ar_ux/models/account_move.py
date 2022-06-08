@@ -38,6 +38,14 @@ class AccountMove(models.Model):
         related="journal_id.type",
     )
 
+    @api.onchange('move_type')
+    def set_default_draft_move_type(self):
+        for rec in self:
+            if rec.move_type == 'out_invoice':
+                rec.draft_move_type = 'out_invoice'
+            if rec.move_type == 'out_refund':
+                rec.draft_move_type = 'out_refund'
+
     @api.onchange("draft_move_type")
     def _onchange_draft_move_type(self):
         if self.type_journal_id == "sale" and self.state == "draft":

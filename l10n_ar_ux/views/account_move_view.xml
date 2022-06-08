@@ -19,9 +19,8 @@
             <xpath expr="//label[@for='journal_id']" position='before'>
                 <field name='type_journal_id' invisible='1' />
                 <field name='draft_move_type' class="oe_edit_only" attrs="{
-                        'invisible':['|', ('type_journal_id', 'not in', ['sale']), ('state', 'not in', ['draft'])],
                         'required':[('type_journal_id', 'in', ['sale']), ('state', 'in', ['draft'])]
-                        }" />
+                        }" invisible="True"/>
                 <field name='move_type' readonly="1" force_save="1" class="oe_read_only" attrs="{
                         'invisible':['|', ('type_journal_id', 'not in', ['sale']), ('state', 'not in', ['draft'])],
                         'required':[('type_journal_id', 'in', ['sale']), ('state', 'in', ['draft'])]
