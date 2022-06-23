@@ -132,8 +132,7 @@ class ResCompany(models.Model):
     def get_agip_data(self, partner, date):
         raise UserError(
             _(
-                "Falta configuración de credenciales de ADHOC para consulta de "
-                "Alícuotas de AGIP"
+                "Recuerde indicar en el cliente la alicuota de ret/perc a aplicar."
             )
         )
 
