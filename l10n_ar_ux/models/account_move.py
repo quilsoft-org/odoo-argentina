@@ -36,6 +36,7 @@ class AccountMove(models.Model):
             ("general", "Miscellaneous"),
         ],
         related="journal_id.type",
+        string="Tipo de diario"
     )
 
     @api.onchange('move_type')
