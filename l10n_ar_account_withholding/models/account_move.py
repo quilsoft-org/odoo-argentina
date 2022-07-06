@@ -15,7 +15,7 @@ class AccountMove(models.Model):
             tax_factor = 1.0 / 1.21
         return tax_factor
 
-    def _recompute_tax_lines(self, recompute_tax_base_amount=False):
+    def _recompute_tax_lines(self, recompute_tax_base_amount=False, tax_rep_lines_to_recompute=None):
         """
         Hacemos esto para disponer de fecha de factura y cia para calcular
         impuesto con código python (por ej. para ARBA).
