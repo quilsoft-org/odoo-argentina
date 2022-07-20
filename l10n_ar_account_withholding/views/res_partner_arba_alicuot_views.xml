@@ -6,14 +6,16 @@
         <field name="model">res.partner.arba_alicuot</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True, 'no_open': True}"/>
+                <field name="company_id" groups="base.group_multi_company"
+                       options="{'no_create': True, 'no_open': True}"/>
                 <field name="tag_id" options="{'no_create': True, 'no_open': True}"/>
                 <field name="from_date"/>
                 <field name="to_date"/>
                 <field name="numero_comprobante"/>
                 <field name="alicuota_percepcion"/>
                 <field name="alicuota_retencion"/>
-                <field name="withholding_amount_type" groups="l10n_ar_account_withholding.partner_tax_withholding_amount_type"/>
+                <field name="withholding_amount_type"
+                       groups="l10n_ar_account_withholding.partner_tax_withholding_amount_type"/>
             </tree>
         </field>
     </record>
@@ -25,7 +27,8 @@
             <form>
                 <group>
                     <group>
-                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="company_id" groups="base.group_multi_company"
+                               options="{'no_create': True, 'no_open': True}"/>
                         <field name="tag_id" options="{'no_create': True, 'no_open': True}"/>
                         <field name="numero_comprobante"/>
                         <field name="grupo_percepcion" groups="base.group_no_one"/>
@@ -33,9 +36,9 @@
                     </group>
                     <group>
                         <label for="from_date"/>
-                            <div class="oe_inline">
+                        <div class="oe_inline">
                             <field name="from_date" class="oe_inline"/>-<field name="to_date" class="oe_inline"/>
-                            </div>
+                        </div>
                         <field name="alicuota_percepcion"/>
                         <field name="alicuota_retencion"/>
                     </group>
@@ -44,12 +47,22 @@
                     <page string="SIRCAR">
                         <p>
                             Utilizado para la generación del TXT para SIRCAR.<br/>
-                            Tipo de Régimen de Retención/precición (código correspondiente según tabla definida por la jurisdicción).<br/>
-                            Puede consultar la tabla <a target="_blank" href="https://www.ca.gov.ar/sircar2">aquí</a>, sección "Instructivos y tablas" item "Tabla con la Tipificación de Regímenes..."
+                            Tipo de Régimen de Retención/precición (código correspondiente según tabla definida por la
+                            jurisdicción).<br/>
+                            Puede consultar la tabla <a target="_blank" href="https://www.ca.gov.ar/sircar2">aquí</a>,
+                            sección "Instructivos y tablas" item "Tabla con la Tipificación de Regímenes..."
                         </p>
                         <group>
                             <field name="regimen_percepcion"/>
                             <field name="regimen_retencion"/>
+                        </group>
+                    </page>
+                    <page string="API">
+                        <group>
+                            <field name="api_codigo_articulo_retencion"/>
+                            <field name="api_articulo_inciso_calculo_retencion"/>
+                            <field name="api_codigo_articulo_percepcion"/>
+                            <field name="api_articulo_inciso_calculo_percepcion"/>
                         </group>
                     </page>
                 </notebook>
