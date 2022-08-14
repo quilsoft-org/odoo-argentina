@@ -7,11 +7,7 @@ class AccountTax(models.Model):
     _inherit = "account.tax"
 
     amount_type = fields.Selection(
-        selection_add=(
-            [
-                ("partner_tax", "Alícuota en el Partner"),
-            ]
-        ),
+        selection_add=([("partner_tax", "Alícuota en el Partner")]),
         ondelete={"partner_tax": "cascade"},
     )
     withholding_type = fields.Selection(
@@ -21,7 +17,10 @@ class AccountTax(models.Model):
                 ("partner_tax", "Alícuota en el Partner"),
             ]
         ),
-        ondelete={"partner_tax": "cascade", "tabla_ganancias": "cascade"},
+        ondelete={
+            "partner_tax": "cascade",
+            "tabla_ganancias": "cascade",
+        },
     )
     # default_alicuot = fields.Float(
     #     'Alícuota por defecto',
