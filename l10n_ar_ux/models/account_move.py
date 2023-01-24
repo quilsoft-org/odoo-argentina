@@ -28,13 +28,6 @@ class AccountMove(models.Model):
     )
 
     type_journal_id = fields.Selection(
-        [
-            ("sale", "Sales"),
-            ("purchase", "Purchase"),
-            ("cash", "Cash"),
-            ("bank", "Bank"),
-            ("general", "Miscellaneous"),
-        ],
         related="journal_id.type",
         string="Tipo de diario"
     )
