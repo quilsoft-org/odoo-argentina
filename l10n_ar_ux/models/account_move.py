@@ -87,6 +87,11 @@ class AccountMove(models.Model):
         For compatibility with old invoices/documents we replicate part of previous method
         https://github.com/ingadhoc/odoo-argentina/blob/12.0/l10n_ar_account/models/account_invoice.py#L234
         """
+
+        # jobiols 2023-03-14
+        # Este es un parche para el caso de que cuando se emite la primera factura el
+        # document number viene en False
+
         try:
             return super()._l10n_ar_get_document_number_parts(
                 document_number, document_type_code
@@ -102,13 +107,21 @@ class AccountMove(models.Model):
             # otherwise use date as a number
             if re.search(r"\d", document_number):
                 invoice_number = document_number
-        elif "-" in document_number:
+        # Aca le agregamos "document_number and" porque viene en False y falla
+        elif document_number and "-" in document_number:
             splited_number = document_number.split("-")
             invoice_number = splited_number.pop()
             point_of_sale = splited_number.pop()
-        elif "-" not in document_number and len(document_number) == 12:
+        # Aca le agregamos "document_number and" porque viene en False y falla
+        elif document_number and "-" not in document_number and len(document_number) == 12:
             point_of_sale = document_number[:4]
             invoice_number = document_number[-8:]
+        # Aca atrapamos el caso de que document_number = False y lo creamos a partir de name
+        elif not document_number:
+            document_number = self.name.split(' ')[1]
+            point_of_sale = document_number.split('-')[0]
+            invoice_number = document_number.split('-')[1]
+            _logger.info('PARCHE primera factura %s', document_number)
         invoice_number = invoice_number and re.sub("[^0-9]", "", invoice_number)
         point_of_sale = point_of_sale and re.sub("[^0-9]", "", point_of_sale)
         if not invoice_number or not point_of_sale:
