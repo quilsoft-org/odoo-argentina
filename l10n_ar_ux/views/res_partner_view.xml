@@ -8,6 +8,7 @@
         <field name="arch" type="xml">
             <field name="ref" position="attributes">
                 <attribute name="placeholder">Reference/Name fantasy</attribute>
+                <attribute name="attrs">{'invisible': [('company_type', '!=', 'company')]}</attribute>
             </field>
             <field name="parent_id" position="after">
                 <field name="ref" position="move"/>
