@@ -13,6 +13,8 @@ _logger = logging.getLogger(__name__)
 class AccountMove(models.Model):
     _inherit = "account.move"
 
+    active = fields.Boolean(default=True)
+
     computed_currency_rate = fields.Float(
         compute="_compute_currency_rate",
         string="Currency Rate (preview)",
