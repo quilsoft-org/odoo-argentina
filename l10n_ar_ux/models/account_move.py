@@ -220,3 +220,8 @@ class AccountMove(models.Model):
                 ("id", "in", self.journal_id.l10n_ar_document_type_ids.ids),
             ]
         return domain
+
+class AccountMoveLine(models.Model):
+    _inherit = "account.move.line"
+
+    active = fields.Boolean(default=True)
