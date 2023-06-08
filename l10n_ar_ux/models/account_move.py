@@ -221,7 +221,3 @@ class AccountMove(models.Model):
             ]
         return domain
 
-class AccountMoveLine(models.Model):
-    _inherit = "account.move.line"
-
-    active = fields.Boolean(default=True)
