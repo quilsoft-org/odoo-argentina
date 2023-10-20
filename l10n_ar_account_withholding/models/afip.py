@@ -17,7 +17,9 @@ class AfipTablagananciasEscala(models.Model):
     )
     porcentaje = fields.Float("Más el %")
     importe_excedente = fields.Float("S/ Exced. de $")
-
+    codigo_de_regimen = fields.Char(
+        'Codigo de Regimen'
+    )
 
 class AfipTablagananciasAlicuotasymontos(models.Model):
     _name = "afip.tabla_ganancias.alicuotasymontos"
