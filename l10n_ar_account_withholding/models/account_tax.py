@@ -132,45 +132,37 @@ class AccountTax(models.Model):
                     # hacemos <= porque si es 0 necesitamos que encuentre
                     # la primer regla (0 es en el caso en que la no
                     # imponible sea mayor)
-                    escala = self.env["afip.tabla_ganancias.escala"].search(
-                        [
-                            ("importe_desde", "<=", base_amount),
-                            ("importe_hasta", ">", base_amount),
-                        ],
-                        limit=1,
-                    )
+                    codigo_de_regimen = '119' if regimen.codigo_de_regimen == '119' else False
+                    escala = self.env['afip.tabla_ganancias.escala'].search([
+                        ('importe_desde', '<=', base_amount),
+                        ('importe_hasta', '>', base_amount),
+                        ('codigo_de_regimen', '=', codigo_de_regimen)
+                    ], limit=1)
                     if not escala:
                         raise UserError(
-                            "No se encontro ninguna escala para el monto"
-                            " %s" % (base_amount)
-                        )
+                            'No se encontro ninguna escala para el monto'
+                            ' %s' % (base_amount))
                     amount = escala.importe_fijo
                     amount += (escala.porcentaje / 100.0) * (
-                        base_amount - escala.importe_excedente
-                    )
-                    vals["comment"] = "%s + (%s x %s)" % (
+                        base_amount - escala.importe_excedente)
+                    vals['comment'] = "%s + (%s x %s)" % (
                         escala.importe_fijo,
                         base_amount - escala.importe_excedente,
-                        escala.porcentaje / 100.0,
-                    )
+                        escala.porcentaje / 100.0)
                 else:
-                    amount = base_amount * (regimen.porcentaje_inscripto / 100.0)
-                    vals["comment"] = "%s x %s" % (
-                        base_amount,
-                        regimen.porcentaje_inscripto / 100.0,
-                    )
-            elif imp_ganancias_padron == "NI":
+                    amount = base_amount * (
+                        regimen.porcentaje_inscripto / 100.0)
+                    vals['comment'] = "%s x %s" % (
+                        base_amount, regimen.porcentaje_inscripto / 100.0)
+            elif imp_ganancias_padron == 'NI':
                 # alicuota no inscripto
-                amount = base_amount * (regimen.porcentaje_no_inscripto / 100.0)
-                vals["comment"] = "%s x %s" % (
-                    base_amount,
-                    regimen.porcentaje_no_inscripto / 100.0,
-                )
+                amount = base_amount * (
+                    regimen.porcentaje_no_inscripto / 100.0)
+                vals['comment'] = "%s x %s" % (
+                    base_amount, regimen.porcentaje_no_inscripto / 100.0)
             # TODO, tal vez sea mejor utilizar otro campo?
             vals["communication"] = "%s - %s" % (
-                regimen.codigo_de_regimen,
-                regimen.concepto_referencia,
-            )
+                regimen.codigo_de_regimen, regimen.concepto_referencia)
             vals["period_withholding_amount"] = amount
         return vals
 
