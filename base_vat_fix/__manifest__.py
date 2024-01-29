@@ -3,7 +3,7 @@
 
 {
     'name': 'VAT Number Validation fix',
-    'version': '1.0',
+    'version': '1.1',
     'category': 'Accounting/Accounting',
     'description': """ """,
     'depends': ['base_vat','l10n_ar'],
