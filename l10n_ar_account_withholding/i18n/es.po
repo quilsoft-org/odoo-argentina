@@ -1,39 +1,24 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* l10n_ar_account_withholding
+# * l10n_ar_account_withholding
 # 
 # Translators:
-# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2020
-# Juan Rivero <jr@adhoc.com.ar>, 2021
+# Juan José Scarafía <scarafia.juanjose@gmail.com>, 2019
+# Federico La Torre <3doeste@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-18 19:14+0000\n"
-"PO-Revision-Date: 2020-03-09 12:54+0000\n"
-"Last-Translator: Juan Rivero <jr@adhoc.com.ar>, 2021\n"
+"POT-Creation-Date: 2019-12-10 18:47+0000\n"
+"PO-Revision-Date: 2019-08-13 20:52+0000\n"
+"Last-Translator: Federico La Torre <3doeste@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/adhoc/teams/46451/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model.fields,help:l10n_ar_account_withholding.field_account_tax__amount_type
-msgid ""
-"\n"
-"    - Group of Taxes: The tax is a set of sub taxes.\n"
-"    - Fixed: The tax amount stays the same whatever the price.\n"
-"    - Percentage of Price: The tax amount is a % of the price:\n"
-"        e.g 100 * 10% = 110 (not price included)\n"
-"        e.g 110 / (1 + 10%) = 100 (price included)\n"
-"    - Percentage of Price Tax Included: The tax amount is a division of the price:\n"
-"        e.g 180 / (1 - 10%) = 200 (not price included)\n"
-"        e.g 200 * (1 - 10%) = 180 (price included)\n"
-"        "
-msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_alicuotasymontos__porcentaje_inscripto
@@ -46,12 +31,6 @@ msgid "% No Inscripto"
 msgstr "% No Inscripto"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.actions.report,print_report_name:l10n_ar_account_withholding.action_report_withholding_certificate
-msgid ""
-"'Certificado de Retención Slip - %s' % (object.withholding_number or '')"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
 #: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.view_res_partner_arba_alicuot_form
 msgid ""
 ", sección \"Instructivos y tablas\" item \"Tabla con la Tipificación de "
@@ -59,236 +38,236 @@ msgid ""
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__001
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__001
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "001: Art. 5º 1er. párrafo (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__001
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "001: Art.1 - inciso A - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__002
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__002
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "002: Art. 5º inciso 1)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__002
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "002: Art.1 - inciso B - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__003
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__003
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "003: Art. 5° inciso 2)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__003
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "003: Art.1 - inciso C - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__004
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__004
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "004: Art. 5º inciso 4)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__004
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "004: Art.1 - inciso D pto.1 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__005
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__005
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "005: Art. 5° inciso 5)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__005
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "005: Art.1 - inciso D pto.2 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__006
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__006
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "006: Art. 6º inciso a)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__006
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "006: Art.1 - inciso D pto.3 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__007
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__007
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "007: Art. 6º inciso b)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__007
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "007: Art.1 - inciso E - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__008
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__008
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "008: Art. 6º inciso c)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__008
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "008: Art.1 - inciso F - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__009
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__009
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "009: Art. 12º)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__009
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "009: Art.1 - inciso H - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__010
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__010
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "010: Art. 6º inciso d)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__010
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "010: Art.1 - inciso I - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__011
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__011
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "011: Art. 5° inciso 6)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__011
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "011: Art.1 - inciso J - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__012
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__012
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "012: Art. 5° inciso 3)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__012
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "012: Art.1 - inciso K - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__013
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__013
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "013: Art. 5° inciso 7)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__013
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "013: Art.1 - inciso L - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_percepcion__014
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_articulo_inciso_calculo_retencion__014
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_percepcion:0
+#: selection:res.partner.arba_alicuot,api_articulo_inciso_calculo_retencion:0
 msgid "014: Art. 5° inciso 8)(Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__014
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "014: Art.1 - inciso LL pto.1 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__015
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "015: Art.1 - inciso LL pto.2 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__016
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "016: Art.1 - inciso LL pto.3 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__017
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "017: Art.1 - inciso LL pto.4 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__018
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "018: Art.1 - inciso LL pto.5 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__019
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "019: Art.1 - inciso M - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_retencion__020
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_retencion:0
 msgid "020: Art.2 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__021
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "021: Art.10 - inciso A - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__022
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "022: Art.10 - inciso B - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__023
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "023: Art.10 - inciso D - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__024
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "024: Art.10 - inciso E - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__025
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "025: Art.10 - inciso F - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__026
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "026: Art.10 - inciso G - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__027
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "027: Art.10 - inciso H - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__028
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "028: Art.10 - inciso I - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__029
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "029: Art.10 - inciso J - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__api_codigo_articulo_percepcion__030
+#: selection:res.partner.arba_alicuot,api_codigo_articulo_percepcion:0
 msgid "030: Art.11 - (Res. Gral. 15/97 y Modif.)"
 msgstr ""
 
@@ -300,21 +279,6 @@ msgid ""
 msgstr ""
 "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
 "specific.\" groups=\"base.group_multi_company\"/>"
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "<strong>Customer: </strong>"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "<strong>Datos de la retención practicada</strong>"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "<strong>VAT Cond: </strong>"
-msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.actions.act_window,name:l10n_ar_account_withholding.act_afip_tabla_ganancias_alicuotasymontos
@@ -335,17 +299,7 @@ msgid "API"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.res_config_settings_view_form
-msgid "ARBA"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model,name:l10n_ar_account_withholding.model_account_move_reversal
-msgid "Account Move Reversal"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner__drei__activo
+#: selection:res.partner,drei:0
 msgid "Activo"
 msgstr "Activo"
 
@@ -385,8 +339,8 @@ msgstr ""
 "contactos "
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__account_tax__amount_type__partner_tax
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__account_tax__withholding_type__partner_tax
+#: selection:account.tax,amount_type:0
+#: selection:account.tax,withholding_type:0
 msgid "Alícuota en el Partner"
 msgstr ""
 
@@ -444,24 +398,14 @@ msgid "Base para retenciones"
 msgstr "Base para retenciones"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_config_settings__arba_cit
-msgid "CIT ARBA"
+#: selection:account.tax,withholding_type:0
+msgid "Based On Rule"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.actions.report,name:l10n_ar_account_withholding.action_report_withholding_certificate
+#: model:ir.actions.report,name:l10n_ar_account_withholding.action_aeroo_certificado_de_retencion_report
 msgid "Certificado de Retención"
 msgstr "Certificado de Retención"
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.res_config_settings_view_form
-msgid "Clave CIT"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model.fields,help:l10n_ar_account_withholding.field_res_config_settings__arba_cit
-msgid "Clave de Identificación Tributaria de ARBA"
-msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__codigo_hash
@@ -494,11 +438,6 @@ msgid "Company Regimenes Ganancias"
 msgstr "Company Regímenes Ganancias"
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "Comprobante que origina la retención:"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_alicuotasymontos__concepto_referencia
 msgid "Concepto Referencia"
 msgstr "Concepto Referencia"
@@ -525,7 +464,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_escala__create_date
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__create_date
 msgid "Created on"
-msgstr "Creado el"
+msgstr "Creado en"
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__api_codigo_articulo_retencion
@@ -535,11 +474,6 @@ msgstr ""
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__api_codigo_articulo_percepcion
 msgid "Código de artículo Inciso por el que percibe"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.res_config_settings_view_form
-msgid "DGR Córdoba"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
@@ -556,7 +490,7 @@ msgid "Display Name"
 msgstr "Display Name"
 
 #. module: l10n_ar_account_withholding
-#: code:addons/l10n_ar_account_withholding/models/account_tax.py:0
+#: code:addons/l10n_ar_account_withholding/models/account_tax.py:89
 #, python-format
 msgid ""
 "El partner %s no tiene configurada inscripcion en impuesto a las ganancias"
@@ -587,22 +521,27 @@ msgid "Escalas Ganancias"
 msgstr "Escalas Ganancias"
 
 #. module: l10n_ar_account_withholding
-#: code:addons/l10n_ar_account_withholding/models/res_company.py:0
+#: code:addons/l10n_ar_account_withholding/models/res_company.py:113
 #, python-format
 msgid ""
-"Falta configuración de credenciales de ADHOC para consulta de Alícuotas de "
+"Falta configuración de credenciales para consulta de Alícuotas de "
 "AGIP"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "Firma Responsable"
+#: selection:account.tax,amount_type:0
+msgid "Fixed"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__from_date
 msgid "From Date"
 msgstr "Desde Fecha"
+
+#. module: l10n_ar_account_withholding
+#: selection:account.tax,amount_type:0
+msgid "Group of Taxes"
+msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__grupo_percepcion
@@ -622,46 +561,26 @@ msgid "ID"
 msgstr "ID"
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "Importe de la retención:"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "Importe del comprobante que origina la retención:"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__account_payment_group__retencion_ganancias__imposibilidad_retencion
+#: selection:account.payment.group,retencion_ganancias:0
 msgid "Imposibilidad de Retención"
 msgstr "Imposibilidad de Retención"
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "Impuesto:"
-msgstr ""
+#: model:ir.model,name:l10n_ar_account_withholding.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.res_config_settings_view_form
-msgid "Indique la clave CIT si utiliza padrón de ARBA de ret/perc de iibb."
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model,name:l10n_ar_account_withholding.model_account_move
-msgid "Journal Entries"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model,name:l10n_ar_account_withholding.model_account_move_line
-msgid "Journal Item"
-msgstr ""
+#: model:ir.model,name:l10n_ar_account_withholding.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de Factura"
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_alicuotasymontos____last_update
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_escala____last_update
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot____last_update
 msgid "Last Modified on"
-msgstr "Última Modificación el"
+msgstr "Última Modificación en"
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_alicuotasymontos__write_uid
@@ -675,7 +594,7 @@ msgstr "Ultima actualización por"
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_escala__write_date
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_partner_arba_alicuot__write_date
 msgid "Last Updated on"
-msgstr "Última actualización el"
+msgstr "Última actualización en"
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_escala__importe_desde
@@ -693,24 +612,22 @@ msgid "Más el %"
 msgstr "Más el %"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner__drei__no_activo
+#: selection:res.partner,drei:0
 msgid "No Activo"
 msgstr "No Activo"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__account_payment_group__retencion_ganancias__no_aplica
+#: selection:account.payment.group,retencion_ganancias:0
 msgid "No Aplica"
 msgstr "No Aplica"
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid ""
-"Nombre y Apellido Firmante:\n"
-"                            <br/>Cargo:"
+#: selection:account.tax,withholding_type:0
+msgid "None"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__account_payment_group__retencion_ganancias__nro_regimen
+#: selection:account.payment.group,retencion_ganancias:0
 msgid "Nro Regimen"
 msgstr "Nro Regimen"
 
@@ -741,10 +658,25 @@ msgid "Payment Group"
 msgstr "Grupo de Pagos"
 
 #. module: l10n_ar_account_withholding
+#: selection:account.tax,amount_type:0
+msgid "Percentage of Price"
+msgstr ""
+
+#. module: l10n_ar_account_withholding
+#: selection:account.tax,amount_type:0
+msgid "Percentage of Price Tax Included"
+msgstr ""
+
+#. module: l10n_ar_account_withholding
 #: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.view_account_payment_from_group_tree
 #: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.view_account_payment_tree
 msgid "Print withholding voucher"
 msgstr "Imprimir Comprobante de retención"
+
+#. module: l10n_ar_account_withholding
+#: selection:account.tax,withholding_type:0
+msgid "Python Code"
+msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_account_payment_group__regimen_ganancias_id
@@ -774,7 +706,7 @@ msgid "Regimenes Ganancia"
 msgstr "Regímenes Ganancias"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_company__agip_padron_type__regimenes_generales
+#: selection:res.company,agip_padron_type:0
 msgid "Regímenes Generales"
 msgstr "Regímenes Generales"
 
@@ -784,26 +716,9 @@ msgid "Regímenes de ganancias en los que usualmente retiene"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_company__cdba_alicuota_no_sincripto_percepcion
-#: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_config_settings__cdba_alicuota_no_sincripto_percepcion
-msgid "Rentas Córdoba: Alícuota no inscripto percepción"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_company__cdba_alicuota_no_sincripto_retencion
-#: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_res_config_settings__cdba_alicuota_no_sincripto_retencion
-msgid "Rentas Córdoba: Alícuota no inscripto retención"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_account_payment_group__retencion_ganancias
 msgid "Retención Ganancias"
 msgstr "Retención Ganancias"
-
-#. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.report_withholding_certificate_document
-msgid "Régimen / Descripción:"
-msgstr ""
 
 #. module: l10n_ar_account_withholding
 #: model:ir.model.fields,field_description:l10n_ar_account_withholding.field_afip_tabla_ganancias_escala__importe_excedente
@@ -821,12 +736,7 @@ msgid "Si es agente de Ret/Perc de AGIP especifique:"
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model_terms:ir.ui.view,arch_db:l10n_ar_account_withholding.res_config_settings_view_form
-msgid "Si es agente de Ret/Perc de DGR Córdoba especifique:"
-msgstr ""
-
-#. module: l10n_ar_account_withholding
-#: code:addons/l10n_ar_account_withholding/models/account_tax.py:0
+#: code:addons/l10n_ar_account_withholding/models/account_tax.py:37
 #, python-format
 msgid ""
 "Si utiliza Cálculo de impuestos igual a \"Alícuota en el Partner\", debe "
@@ -835,7 +745,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__account_tax__withholding_type__tabla_ganancias
+#: selection:account.tax,withholding_type:0
 msgid "Tabla Ganancias"
 msgstr ""
 
@@ -865,7 +775,7 @@ msgid "To Date"
 msgstr "A Fecha"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__withholding_amount_type__total_amount
+#: selection:res.partner.arba_alicuot,withholding_amount_type:0
 msgid "Total Amount"
 msgstr "Monto Total"
 
@@ -875,7 +785,7 @@ msgid "Type"
 msgstr "Tipo"
 
 #. module: l10n_ar_account_withholding
-#: model:ir.model.fields.selection,name:l10n_ar_account_withholding.selection__res_partner_arba_alicuot__withholding_amount_type__untaxed_amount
+#: selection:res.partner.arba_alicuot,withholding_amount_type:0
 msgid "Untaxed Amount"
 msgstr "Monto sin impuestos"
 
@@ -902,7 +812,7 @@ msgid ""
 msgstr ""
 
 #. module: l10n_ar_account_withholding
-#: code:addons/l10n_ar_account_withholding/models/res_company.py:0
+#: code:addons/l10n_ar_account_withholding/models/res_company.py:92
 #, python-format
 msgid "You must configure ARBA CIT on company %s"
 msgstr "Debe configurar el CIT de ARA en la compañía %s"

@@ -4,7 +4,7 @@
         <t t-call="web.external_layout">
             <t t-set="o" t-value="o.with_context(lang=lang)" />
                 <t t-set="custom_header" t-value="'l10n_ar.custom_header'"/>
-                <t t-set="report_date" t-value="o.date"/>
+                <t t-set="report_date" t-value="o.move_id.date"/>
                 <t t-set="report_number" t-value="o.withholding_number or o.name"/>
                 <t t-set="report_name" t-value="'CERTIFICADO DE RETENCIÓN'"/>
                 <t t-set="header_address" t-value="o.company_id.partner_id"/>
@@ -38,7 +38,7 @@
 
                         <!-- (17) CUIT -->
                         <t t-if="o.partner_id.vat and o.partner_id.l10n_latam_identification_type_id.name and o.partner_id.l10n_latam_identification_type_id.name != 'Sigd'">
-                            <br/><strong><t t-esc="o.partner_id.l10n_latam_identification_type_id.name or o.company_id.country_id.vat_label" id="inv_tax_id_label"/>:</strong> <span t-esc="o.partner_id.l10n_ar_formatted_vat if o.partner_id.l10n_latam_identification_type_id.is_vat else o.partner_id.vat"/>
+                            <br/><strong><t t-esc="o.partner_id.l10n_latam_identification_type_id.name or o.company_id.country_id.vat_label" id="inv_tax_id_label"/>:</strong> <span t-field="o.partner_id.l10n_ar_formatted_vat"/>
                         </t>
 
                     </div>
@@ -55,7 +55,7 @@
                                 Impuesto:
                             </td>
                             <td class="text-left">
-                                <span t-field="o.tax_withholding_id.description"/>
+                                <span t-field="o.tax_withholding_id.name"/>
                             </td>
                         </tr>
                         <tr>
@@ -63,7 +63,7 @@
                                 Régimen / Descripción:
                             </td>
                             <td class="text-left">
-                                <span t-field="o.communication"/>
+                                <span t-field="o.communication_data"/>
                             </td>
                         </tr>
                         <tr>
@@ -71,7 +71,7 @@
                                 Comprobante que origina la retención:
                             </td>
                             <td class="text-left">
-                                <span t-field="o.payment_group_id.l10n_latam_document_number"/>
+                                <span t-field="o.payment_group_id.document_number"/>
                             </td>
                         </tr>
                         <tr>
@@ -113,7 +113,6 @@
         name="l10n_ar_account_withholding.report_withholding_certificate"
         file="l10n_ar_account_withholding.report_withholding_certificate"
         print_report_name="'Certificado de Retención Slip - %s' % (object.withholding_number or '')"
-        menu="False"
     />
 
 </odoo>

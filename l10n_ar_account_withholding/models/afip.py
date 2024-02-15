@@ -2,35 +2,40 @@ from odoo import models, fields
 
 
 class AfipTablagananciasEscala(models.Model):
-    _name = "afip.tabla_ganancias.escala"
-    _description = "afip.tabla_ganancias.escala"
-    _rec_name = "importe_desde"
+    _name = 'afip.tabla_ganancias.escala'
+    _description = 'afip.tabla_ganancias.escala'
+    _rec_name = 'importe_desde'
 
     importe_desde = fields.Float(
-        "Mas de $",
+        'Mas de $',
     )
     importe_hasta = fields.Float(
-        "A $",
+        'A $',
     )
     importe_fijo = fields.Float(
-        "$",
+        '$',
     )
-    porcentaje = fields.Float("Más el %")
-    importe_excedente = fields.Float("S/ Exced. de $")
+    porcentaje = fields.Float(
+        'Más el %'
+    )
+    importe_excedente = fields.Float(
+        'S/ Exced. de $'
+    )
     codigo_de_regimen = fields.Char(
         'Codigo de Regimen'
     )
 
+
 class AfipTablagananciasAlicuotasymontos(models.Model):
-    _name = "afip.tabla_ganancias.alicuotasymontos"
-    _description = "afip.tabla_ganancias.alicuotasymontos"
-    _rec_name = "codigo_de_regimen"
+    _name = 'afip.tabla_ganancias.alicuotasymontos'
+    _description = 'afip.tabla_ganancias.alicuotasymontos'
+    _rec_name = 'codigo_de_regimen'
 
     codigo_de_regimen = fields.Char(
-        "Codigo de regimen",
+        'Codigo de regimen',
         size=6,
         required=True,
-        help="Codigo de regimen de inscripcion en impuesto a las ganancias.",
+        help='Codigo de regimen de inscripcion en impuesto a las ganancias.'
     )
     anexo_referencia = fields.Char(
         required=True,
@@ -39,7 +44,11 @@ class AfipTablagananciasAlicuotasymontos(models.Model):
         required=True,
     )
     porcentaje_inscripto = fields.Float(
-        "% Inscripto", help="Elija -1 si se debe calcular s/escala"
+        '% Inscripto',
+        help='Elija -1 si se debe calcular s/escala'
     )
-    porcentaje_no_inscripto = fields.Float("% No Inscripto")
-    montos_no_sujetos_a_retencion = fields.Float()
+    porcentaje_no_inscripto = fields.Float(
+        '% No Inscripto'
+    )
+    montos_no_sujetos_a_retencion = fields.Float(
+    )

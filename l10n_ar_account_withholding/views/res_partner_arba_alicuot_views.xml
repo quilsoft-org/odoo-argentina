@@ -11,7 +11,7 @@
                 <field name="from_date"/>
                 <field name="to_date"/>
                 <field name="numero_comprobante"/>
-                <field name="alicuota_percepcion"/>
+                <field name="alicuota_percepcion" options="{'field_digits': True}"/>
                 <field name="alicuota_retencion"/>
                 <field name="withholding_amount_type" groups="l10n_ar_account_withholding.partner_tax_withholding_amount_type"/>
             </tree>
@@ -36,7 +36,7 @@
                             <div class="oe_inline">
                             <field name="from_date" class="oe_inline"/>-<field name="to_date" class="oe_inline"/>
                             </div>
-                        <field name="alicuota_percepcion"/>
+                        <field name="alicuota_percepcion" options="{'field_digits': True}"/>
                         <field name="alicuota_retencion"/>
                     </group>
                 </group>

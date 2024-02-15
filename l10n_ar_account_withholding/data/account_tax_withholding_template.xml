@@ -561,8 +561,8 @@
 
         <record id="ri_tax_retencion_iibb_sf_sufrida" model="account.tax.template">
             <field name="chart_template_id" ref="l10n_ar.l10nar_ex_chart_template"/>
-            <field name="name">Retención IIBB Santa Fe Sufrida</field>
-            <field name="description">Ret IIBB Santa Fe S</field>
+            <field name="name">Retención IIBB Santa Fé Sufrida</field>
+            <field name="description">Ret IIBB Santa Fé S</field>
             <field name="sequence">4</field>
             <field name="amount_type">fixed</field>
             <field eval="0.0" name="amount"/>
@@ -1914,6 +1914,47 @@
             <field name="type_tax_use">supplier</field>
             <field name="tax_group_id" ref="l10n_ar_ux.tax_group_retencion_iibb_tf"/>
         </record>
+
+
+
+<!--   NO definition for tax_group_retencion_iibb in l10n_ar_ux
+        <record id="ri_tax_retencion_iibb_aplicada" model="account.tax.template">
+            <field name="chart_template_id" ref="l10n_ar.l10nar_ex_chart_template"/>
+            <field name="name">Retención IIBB Aplicada</field>
+            <field name="description">Ret IIBB A</field>
+            <field name="sequence">4</field>
+            <field name="amount_type">fixed</field>
+            <field eval="0.0" name="amount"/>
+            <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_ar.ri_retencion_iibb_a_pagar'),
+                    'tag_ids': [(6, 0, [ref('l10n_ar_ux.tag_ret_perc_iibb_aplicada')])],
+                }),
+            ]"/>
+            <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'base',
+                }),
+
+                (0,0, {
+                    'factor_percent': 100,
+                    'repartition_type': 'tax',
+                    'account_id': ref('l10n_ar.ri_retencion_iibb_a_pagar'),
+                    'tag_ids': [(6, 0, [ref('l10n_ar_ux.tag_ret_perc_iibb_aplicada')])],
+                }),
+            ]"/>
+            <field name="type_tax_use">supplier</field>
+            <field name="tax_group_id" ref="l10n_ar_ux.tax_group_retencion_iibb"/>
+        </record>
+-->
 
     <!-- Retenciones iva -->
         <record id="ri_tax_retencion_iva_aplicada" model="account.tax.template">

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record model="ir.ui.view" id="view_partner_form">
+    <record model="ir.ui.view" id="view_partner_form_with_ar">
         <field name="name">res.partner.form.inherit</field>
-        <field name="inherit_id" ref="l10n_ar_ux.view_partner_property_form"/>
+        <field name="inherit_id" ref="l10n_ar_ux.view_partner_property_form_inh_ux"/>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
             <field name="imp_ganancias_padron" position="after">

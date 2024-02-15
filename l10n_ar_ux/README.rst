@@ -14,9 +14,8 @@
 Argentinian Accounting UX
 =========================
 
-This module extends the l10n_ar module to add some usability improvements:
+This module extends the l10n_ar module to add some usability improvesment:
 
-#. Set tax included by default (for ecommerce)
 #. Change USD symbol to "USD" instead of "$". This to avoid confusion when using multi company environment with ARS and USD at the same time.
 #. Change postion of EUR symbol, Put it before the amounts in order to match to the ARS and USD currencies format,
 #. Add portal support for AFIP responsability, and Identification type fields.
@@ -25,9 +24,9 @@ This module extends the l10n_ar module to add some usability improvements:
 #. Add account tag data for Argentina (include jurisdiccion ones)
 #. Add tax groups for withholding
 #. Show Name fantasy in the partner form view.
+#. Make some fields in company required if company is Argentina: vat, state_id, country_id, city, street, zip.
 #. Set Non Monetary tag to accounts depending of the account type
 #. Show Gross Income Jurisdiction in both partner and company
-#. Add a not nice implementation for duplicado/triplicado on invoices (and later on delivery slip with l10n_ar_stock)
 #. Add checks account link to chart template
 
 Installation

@@ -9,17 +9,15 @@ class ResCompany(models.Model):
 
     _inherit = "res.company"
 
+    l10n_ar_country_code = fields.Char(related='country_id.code', string='Country Code')
     gross_income_jurisdiction_ids = fields.Many2many(
-        related="partner_id.gross_income_jurisdiction_ids",
+        related='partner_id.gross_income_jurisdiction_ids',
         readonly=False,
+        domain=[('country_id.code','=','AR')]
     )
+
     # TODO this field could be defined directly on l10n_ar_account_withholding
     arba_cit = fields.Char(
-        "CIT ARBA",
-        help="Clave de Identificación Tributaria de ARBA",
-    )
-    # la fecha de comienzo de actividades puede ser por cada punto de venta distinta, lo convertimos a related del
-    # partner
-    l10n_ar_afip_start_date = fields.Date(
-        related="partner_id.start_date", string="Activities Start", readonly=False
+        'CIT ARBA',
+        help='Clave de Identificación Tributaria de ARBA',
     )
